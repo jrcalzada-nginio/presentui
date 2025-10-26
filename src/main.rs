@@ -145,7 +145,7 @@ impl FileTypes {
             }
             FileTypes::FIGlet(txt) => {
                 //TODO: draw manually to allow centering
-                let standard_font = FIGfont::standand().unwrap();
+                let standard_font = FIGfont::standard().unwrap();
                 let figure = standard_font.convert(txt).unwrap();
                 disable_raw_mode()?;
                 w.write_all(figure.to_string().as_bytes())?;
